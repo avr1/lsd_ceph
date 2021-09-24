@@ -41,5 +41,25 @@ This project is designed for a researcher to integrate their next-generation blo
 
 ## 4 Solution concept
 
+ We will be using Go to either modify or extend the research block device in order to allow functionality between it and the API for Ceph's librbd.
+ 
+ Based on the lingering questions, we will understand more about the different procedures for testing to ensure that the library is performing as expected, and we will also understand how to run test suites and integrate our code with Kubernetes and OpenStack.
+ 
+ Currently, our rough idea looks as follows:
  - ![6620](https://user-images.githubusercontent.com/74415990/134605606-0dfd21b2-eaa9-4efd-b1c6-d8b88bd33544.png)
+
+## 5. Acceptance criteria
+
+Minimum acceptance criteria is a library that allows for the block device to be written to and read from, in a QEMU/KVM virtualized environment.
+
+Stretch goals include passing existing test suites for RBD, improving upon the research disk, and supporting Kubernets PVCs.
+
+## 6. Release planning
+ We will be splitting our time across 5 2-week long sprints. Below is the functionality that we hope to achieve by the end of the sprint.
+ 
+ - Sprint 1: Understand lingering questions, construct a minimal example of the Go - C compatibility, determine which rbd functions to implement.
+ - Sprint 2: 
+ - Sprint 3: Finish crafting the API and test integration of research block device with QEMU/KVM in a virtualized environment.
+ - Sprint 4: Integrate Kubernetes PVCs, and also run and pass existing RBD test suites.
+ - Sprint 5:
 
