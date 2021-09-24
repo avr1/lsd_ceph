@@ -63,3 +63,6 @@ Stretch goals include passing existing test suites for RBD, improving upon the r
  - Sprint 4: Integrate Kubernetes PVCs, and also run and pass existing RBD test suites.
  - Sprint 5: Allow for portable RBD image creation. (???)
 
+## General Notes
+
+Ceph is a scale-out object storage system, that allows for 3 interaction points. We will focus on Ceph RBD, which behaves as a block device (disk). We will use the existing librbd(CEPH's project) to connect our research block device (which currently has a Linux kernel interface) to Ceph, which in turn, through rbd-nbd and qemu-rbd, allow us to interact with Kubernetes PVC's and OpenStack via QEMU/KVM. Although librbd's API is long, we will select only the relevant functions to expose via the Go Language and it's C-Compatible API tooling. We estimate, conservatively, about 15 API calls to implement. You can find the relevant research projects [here](https://github.com/asch/dis), [here](https://github.com/asch/bs3), and [here](https://github.com/asch/buse).
