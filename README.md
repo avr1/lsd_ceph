@@ -40,3 +40,6 @@ This project is designed for a researcher to integrate their next-generation blo
   - How do we build and run the existing code? Do we have to build our own kernel?
 
 ## 4 Solution concept
+
+ - ![6620](https://user-images.githubusercontent.com/74415990/134605606-0dfd21b2-eaa9-4efd-b1c6-d8b88bd33544.png)
+
