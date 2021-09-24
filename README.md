@@ -46,7 +46,7 @@ This project is designed for a researcher to integrate their next-generation blo
  Based on the lingering questions, we will understand more about the different procedures for testing to ensure that the library is performing as expected, and we will also understand how to run test suites and integrate our code with Kubernetes and OpenStack.
  
  Currently, our rough idea looks as follows:
- - ![6620](https://user-images.githubusercontent.com/74415990/134605606-0dfd21b2-eaa9-4efd-b1c6-d8b88bd33544.png)
+ ![6620](https://user-images.githubusercontent.com/74415990/134605606-0dfd21b2-eaa9-4efd-b1c6-d8b88bd33544.png)
 
 ## 5. Acceptance criteria
 
