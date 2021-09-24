@@ -58,8 +58,8 @@ Stretch goals include passing existing test suites for RBD, improving upon the r
  We will be splitting our time across 5 2-week long sprints. Below is the functionality that we hope to achieve by the end of the sprint.
  
  - Sprint 1: Understand lingering questions, construct a minimal example of the Go - C compatibility, determine which rbd functions to implement.
- - Sprint 2: 
+ - Sprint 2: Begin implementing library and writing unit tests.
  - Sprint 3: Finish crafting the API and test integration of research block device with QEMU/KVM in a virtualized environment.
  - Sprint 4: Integrate Kubernetes PVCs, and also run and pass existing RBD test suites.
- - Sprint 5:
+ - Sprint 5: Allow for portable RBD image creation. (???)
 
