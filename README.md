@@ -70,6 +70,9 @@ Ceph is a scale-out object storage system, that allows for 3 interaction points.
 
 ## Demos
 
+### Demo 2 - October 21, 2021
+[![IMAGE_ALT_TEXT](http://img.youtube.com/vi/2DXEPQgI0OM/0.jpg)](https://www.youtube.com/watch?v=2DXEPQgI0OM "Log structured virtual disk for Ceph NEU CS6620 Demo #2")
+
 ### Demo 1 - October 7, 2021
 [![IMAGE_ALT_TEXT](http://img.youtube.com/vi/ycN05trcXdA/0.jpg)](https://www.youtube.com/watch?v=ycN05trcXdA "Log structured virtual disk for Ceph NEU CS6620 Demo #1")
 
