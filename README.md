@@ -1,6 +1,7 @@
 # lsd_ceph
 Log-structured virtual disk in Ceph
 
+Source code can be found at ![this](https://github.com/SiddheshRane/librbdbs3) repository.
 
 ## 1. Vision and Goals of the Project
 
