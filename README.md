@@ -1,9 +1,30 @@
 # lsd_ceph
+
 Log-structured virtual disk in Ceph
 
 For instructions on building and deploying this project, check out the build.md file.
 
 Source code can be found at ![this](https://github.com/SiddheshRane/librbdbs3) repository.
+
+## Project Explanation
+
+### Intro
+The project started with a research block device that was written in the Go Programming language. This block device was faster than previous generations, which it accomplished by caching using SSD storage on the client-side, as well as a log-structure to speed up writes. Our goal was to modify the block device, which had a Linux Kernel Interface, to support connection with virtualized environments like QEMU via librbd, which is a Ceph interface for block devices.
+
+We wanted to be able to write a shared library with simplified librbd implementation but which redirects the IO operations to the research block device instead. Reusing librbd API would allow integration of the research device with QEMU, Kubernetes and any other librbd clients.
+
+### Infrastructure Setup and Running
+We initially set up infrastructure to be able to understand which librbd functions and structures were used by QEMU, and then we isolated those functions to create our own librbd implementation.To accomplish this, we initially set up a ceph cluster using vstart.sh.  We then ran QEMU and FIO, a disk testing framework, to figure out exactly which functions were missing. We copied over the relevant code, and connected it to functions we would later implement in the research block device. Using CGo, a cross-compiler tool built for the Go Language, we refactored the block device code to avoid using its built-in kernel module, and instead exported function calls that were implemented by our librbd. 
+
+To run our code, we can use a trick called LD_PRELOAD, which allows us to override original librbd functions with our own. It would do so by adding an order to our shared libraries, which would let us overwrite the existing file with our own. We can also  globally replace the system installed librbd.so with our version but doing so may introduce bugs in other code which depends on this library.
+
+Another part of the project was to test and evaluate the function calls from librbd. We used FIO to analyze the necessary functions that need to be implemented by our null interface for librbd. 
+
+### Result Testing with QEMU-IO and FIO 
+Fio is a flexible disk performance testing tool. It’s able to simulate a given workload by spawning a number of threads. We used FIO to simulate a sequential read and write workload to stress test implementation of our librbd. 
+
+QEMU-I/O is similar to fio. It allows us to open, read, write, and close the rbd device, which uses a similar interface as the one that QEMU uses with librbd. This allows us to test the functions we have implemented for correctness and stability.
+
 
 ## 1. Vision and Goals of the Project
 
