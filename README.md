@@ -1,7 +1,7 @@
 # lsd_ceph
 Log-structured virtual disk in Ceph
 
-For instructions on building and deploying this project, check out the BUILDME.md file.
+For instructions on building and deploying this project, check out the build.md file.
 
 Source code can be found at ![this](https://github.com/SiddheshRane/librbdbs3) repository.
 
