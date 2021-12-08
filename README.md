@@ -19,6 +19,8 @@ We initially set up infrastructure to be able to understand which librbd functio
 To run our code, we can use a trick called LD_PRELOAD, which allows us to override original librbd functions with our own. It would do so by adding an order to our shared libraries, which would let us overwrite the existing file with our own. We can also  globally replace the system installed librbd.so with our version but doing so may introduce bugs in other code which depends on this library.
 
 Another part of the project was to test and evaluate the function calls from librbd. We used FIO to analyze the necessary functions that need to be implemented by our null interface for librbd. 
+ 
+![flowchart](/images/lsd_flowchart.png)
 
 ### Result Testing with QEMU-IO and FIO 
 Fio is a flexible disk performance testing tool. It’s able to simulate a given workload by spawning a number of threads. We used FIO to simulate a sequential read and write workload to stress test implementation of our librbd. 
