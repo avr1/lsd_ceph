@@ -43,7 +43,9 @@ clone the repo:
 
 [https://github.com/canha/golang-tools-install-script](https://github.com/canha/golang-tools-install-script)
 
-execute [build.sh](http://build.sh), ensure [librbd.so](http://librbd.so) is present in mylibrbd directory
+Also, clone the repo wih our source modifications: https://github.com/SiddheshRane/librbdbs3
+
+execute [build.sh](https://github.com/SiddheshRane/librbdbs3/build.sh), ensure librbd.so is present in mylibrbd directory
 
 ## Setting up testing tools
 
